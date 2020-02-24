@@ -1,0 +1,17 @@
+def workspace;
+node{
+    stage('checkout')
+    {
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sravuri27/helloworld.git']]])
+        workspace = pwd()
+        echo'ravuri'
+    }
+    stage('Build')
+    {
+        echo'suresh'
+    }
+    stage('code analsys')
+    {a
+        echo'babu'
+    }
+}
